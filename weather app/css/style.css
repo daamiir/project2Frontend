@@ -1,0 +1,248 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	background: #4fa9b9;
+	line-height: 1;	
+    font-size: 1rem;
+	box-sizing: border-box;
+    color: white;
+	text-transform: uppercase;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Search container */
+.search-container {
+    display: flex;
+    padding: 15px;
+    background: #4fa9b9;
+    border-radius: 15px 15px 0 0;
+    justify-content: space-between;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #5fb5c5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main panel */
+.main-panel {
+    padding: 20px;
+    text-align: center;
+    background-color: #5fb5c5;
+	margin-bottom: 20px;
+    border-radius: 16px;
+}
+
+.city-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-top: 5px;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+.temperature {
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.description {
+    font-size: 18px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255, .5);
+}
+
+.wind,
+.humidity {
+    font-size: 12px;
+    color: #f5f5f5;
+    margin-top: 5px;
+}
+
+/* Forecast grid */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #4fa9b9;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    background-color: #5fb5c5;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day-icon {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.temp-high {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.temp-low {
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.condition {
+    font-size: 10px;
+    color: rgb(255, 255, 255, .5);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .city-name {
+        font-size: 20px;
+    }
+    
+    .date {
+        font-size: 12px;
+    }
+    
+    .weather-info {
+        flex-direction: column;
+    }
+    
+    .icon {
+        font-size: 40px;
+    }
+    
+    .temperature {
+        font-size: 50px;
+        margin: 10px 0;
+    }
+    
+    .description {
+        font-size: 16px;
+    }
+    
+    .forecast-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .city-name {
+        font-size: 18px;
+    }
+    
+    .date {
+        font-size: 10px;
+    }
+    
+    .icon {
+        font-size: 35px;
+    }
+    
+    .temperature {
+        font-size: 40px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .forecast-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .day {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

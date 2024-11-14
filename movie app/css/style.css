@@ -1,0 +1,283 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #100e19;
+  color: #f5f5f5;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.search{
+  width: 70%;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #f30745;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Suggestions box */
+.suggestions {
+  position: absolute;
+  top: 100%; 
+  left: 0; 
+  width: 70%; 
+  max-width: 70%; 
+  background-color: #333;
+  color: #f5f5f5;
+  max-height: 160px; 
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  margin-top: 5px;
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  display: flex;
+  gap: 20px;
+}
+
+.suggestion-img{
+  max-width: 24px;
+  height: 50%;
+}
+
+
+
+.suggestion-item:hover {
+  background-color: #444;
+}
+
+
+/* Movies Section */
+.movies-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background-color: #333;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f5f5f5;
+  margin: 10px 0;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  padding: 0 5px; 
+}
+
+.movie-genre,
+.movie-rating,
+.movie-release-date {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.watchlist-button {
+  background-color: #f5a623;
+  border: none;
+  color: #121212;
+  margin: 5px 0;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.watchlist-button:hover {
+  background-color: #f08a00;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+.modal-content {
+  background-color: #1a1a2e;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #393737;
+  width: 70%;
+  max-width: 800px;
+  color: #f5f5f5;
+}
+
+.modal-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-poster {
+  width: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.modal-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.modal-title {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.modal-info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.modal-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-overview {
+  font-size: 15px;
+  color: #aaa;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #fff;
+}
+
+
+/* Watchlist Section */
+.watchlist-section {
+  padding: 20px;
+  background-color: #1e1e1e;
+  margin-top: 20px;
+  display: none;
+}
+
+.watchlist-section h2 {
+  font-size: 24px;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.empty-watchlist {
+  color: #bbb;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  
+  .movie-title {
+    font-size: 16px;
+  }
+
+  .movie-genre,
+  .movie-rating,
+  .movie-release-date {
+    font-size: 12px;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-overview {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-poster{
+    max-width: 160px;
+  }
+
+  .modal-title {
+    font-size: 14px;
+  }
+
+  .modal-overview {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <div class="search">
+      <input type="text" placeholder="Search for movies..." class="search-bar">
+      <div class="suggestions"></div>
+    </div>
+    <button class="search-button">Search</button>
+       
+  </div>
+  
+
+  <!-- Movies Grid Section -->
+  <section class="movies-section">
+  </section>
+
+  <!-- Watchlist Section -->
+  <section class="watchlist-section">
+    <h2>Your Watchlist</h2>
+    <p class="empty-watchlist">No movies added to watchlist.</p>
+    <!-- Watchlist items will appear here -->
+  </section>
+
+  <!-- Modal Structure -->
+<div class="modal" id="movieModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <div class="modal-body">
+      <div class="modal-header">
+        <img id="modalPoster" src="" alt="Movie Poster" class="modal-poster">
+        <div class="modal-info">
+          <h2 id="modalTitle" class="modal-title"></h2>
+          <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+          <p><strong>Duration:</strong> <span id="modalDuration"></span> </p>
+          <p><strong>Genres:</strong> <span id="modalGenres"></span></p>
+        </div>
+      </div>
+      <div class="modal-description">
+        <p id="modalOverview" class="modal-overview"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
